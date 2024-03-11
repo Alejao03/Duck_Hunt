@@ -1,0 +1,48 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+*.db
+
+*.idb
+
+Practica2/Temp/
+
+Practica2/.vs/
+
+Practica2/Exes/
+
+Practica2/lib/
+
+Practica2/Dependencies/
+
+Practica2/Orbis/

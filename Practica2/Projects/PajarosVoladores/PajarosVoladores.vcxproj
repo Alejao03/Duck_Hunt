@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ORBIS">
+      <Configuration>Debug</Configuration>
+      <Platform>ORBIS</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ORBIS">
+      <Configuration>Release</Configuration>
+      <Platform>ORBIS</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Src\Game\atomicops.h" />
+    <ClInclude Include="..\..\Src\Game\Bird.h" />
+    <ClInclude Include="..\..\Src\Game\Cursor.h" />
+    <ClInclude Include="..\..\Src\Game\Definitions.h" />
+    <ClInclude Include="..\..\Src\Game\DuckSprites.h" />
+    <ClInclude Include="..\..\Src\Game\BirdScene.h" />
+    <ClInclude Include="..\..\Src\Game\Command.h" />
+    <ClInclude Include="..\..\Src\Game\readerwritercircularbuffer.h" />
+    <ClInclude Include="..\..\Src\Game\readerwriterqueue.h" />
+    <ClInclude Include="..\..\Src\Game\RenderThread.h" />
+    <ClInclude Include="..\..\Src\Game\ResourceManager.h" />
+    <ClInclude Include="..\..\Src\Game\Sprite.h" />
+    <ClInclude Include="..\..\Src\Game\StaticEntity.h" />
+    <ClInclude Include="..\..\Src\Game\Vector2D.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Src\Game\Bird.cpp" />
+    <ClCompile Include="..\..\Src\Game\Cursor.cpp" />
+    <ClCompile Include="..\..\Src\Game\DuckSprites.cpp" />
+    <ClCompile Include="..\..\Src\Game\BirdScene.cpp" />
+    <ClCompile Include="..\..\Src\Game\main.cpp" />
+    <ClCompile Include="..\..\Src\Game\RenderThread.cpp" />
+    <ClCompile Include="..\..\Src\Game\ResourceManager.cpp" />
+    <ClCompile Include="..\..\Src\Game\Sprite.cpp" />
+    <ClCompile Include="..\..\Src\Game\StaticEntity.cpp" />
+    <ClCompile Include="..\..\Src\Game\Vector2D.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FC543560-68EB-4446-AA77-EF8D58664B45}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>PajarosVoladores</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <PropertyGroup Condition="'$(DebuggerFlavor)'=='ORBISDebugger'" Label="OverrideDebuggerDefaults">
+    <!--LocalDebuggerCommand>$(TargetPath)</LocalDebuggerCommand-->
+    <!--LocalDebuggerCommandArguments></LocalDebuggerCommandArguments-->
+    <!--LocalDebuggerTarget></LocalDebuggerTarget-->
+    <!--LocalDebuggerWorkingDirectory>$(ProjectDir)</LocalDebuggerWorkingDirectory-->
+    <!--LocalRunCommandLine></LocalRunCommandLine-->
+  </PropertyGroup>
+  <ImportGroup Label="ExtensionSettings">
+    <Import Condition="Exists('$(VCTargetsPath)\BuildCustomizations\OrbisWavePsslc.props')" Project="$(VCTargetsPath)\BuildCustomizations\OrbisWavePsslc.props" />
+    <Import Condition="Exists('$(VCTargetsPath)\BuildCustomizations\SCU.props')" Project="$(VCTargetsPath)\BuildCustomizations\SCU.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IntDir>$(SolutionDir)Temp\$(PorjectName)$(Platform)\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)Exes\</OutDir>
+    <PublicIncludeDirectories>$(SolutionDir)Src\Engine\Common\;$(SolutionDir)Src\Engine\PC\;$(PublicIncludeDirectories)</PublicIncludeDirectories>
+    <TargetName>$(ProjectName)_d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IntDir>$(SolutionDir)Temp\$(PorjectName)$(Platform)\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)Exes\</OutDir>
+    <PublicIncludeDirectories>$(SolutionDir)Src\Engine\Common\;$(SolutionDir)Src\Engine\PC\;$(PublicIncludeDirectories)</PublicIncludeDirectories>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'">
+    <IntDir>$(SolutionDir)Temp\$(PorjectName)$(Platform)\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)Orbis\</OutDir>
+    <IncludePath>$(SolutionDir)Src\Engine\PS4\;$(IncludePath)</IncludePath>
+    <TargetName>$(ProjectName)_d</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'">
+    <IntDir>$(SolutionDir)Temp\$(PorjectName)$(Platform)\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)Orbis\</OutDir>
+    <IncludePath>$(SolutionDir)Src\Engine\PS4\;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ORBIS'">
+    <ClCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions);</PreprocessorDefinitions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <AdditionalIncludeDirectories>$(SolutionDir)\Src\Engine\Common\</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib\$(Platform)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>engine.a;libSceUserService_stub_weak.a;libScePad_stub_weak.a;libSceRandom_stub_weak.a;libSceSysmodule_stub_weak.a;-lScePosix_stub_weak;-lSceVideoOut_stub_weak;-lSceGnmDriver_stub_weak;-lSceGnmx;-lSceGnm;-lSceGpuAddress;-lSceSystemService_stub_weak;-|ScePad_stub_weak;-|SceUserService_stub_weak;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>$(SolutionDir)Temp\$(Platform)\$(Configuration)\user_malloc.o %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <PreBuildEvent>
+      <Command>xcopy /y /d /s "$(SolutionDir)"assets  "$(SolutionDir)"\\Exes\\assets\\</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions);</PreprocessorDefinitions>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <AdditionalIncludeDirectories>$(SolutionDir)\Src\Engine\Common\;$(SolutionDir)\Src\Engine\PC\;$(SolutionDir)Dependencies\SDL2-2.24.0\include\</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib\$(Platform)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <!--<AdditionalDependencies>PC_d.lib;Common_d.lib;%(AdditionalDependencies)</AdditionalDependencies>-->
+      <AdditionalDependencies>PC_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /y /d "$(SolutionDir)"\Dependencies\SDL2-2.24.0\SDL2_d.dll "$(OutDir)"</Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>xcopy /y /d /s "$(SolutionDir)"assets  "$(OutDir)"assets\\
+xcopy /y /d "$(SolutionDir)"Dependencies\\SDL2-2.24.0\\SDL2_d.dll  "$(OutDir)"</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ORBIS'">
+    <ClCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions);</PreprocessorDefinitions>
+      <OptimizationLevel>Level2</OptimizationLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <AdditionalIncludeDirectories>$(SolutionDir)\Src\Engine\Common\</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib\$(Platform)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>engine.a;libSceUserService_stub_weak.a;libScePad_stub_weak.a;libSceRandom_stub_weak.a;libSceSysmodule_stub_weak.a;-lScePosix_stub_weak;-lSceVideoOut_stub_weak;-lSceGnmDriver_stub_weak;-lSceGnmx;-lSceGnm;-lSceGpuAddress;-lSceSystemService_stub_weak;-|ScePad_stub_weak;-|SceUserService_stub_weak;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>$(SolutionDir)Temp\$(Platform)\$(Configuration)\user_malloc.o %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <PreBuildEvent>
+      <Command>xcopy /y /d /s "$(SolutionDir)"assets  "$(SolutionDir)"\\Exes\\assets\\</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions);</PreprocessorDefinitions>
+      <OptimizationLevel>Level2</OptimizationLevel>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <AdditionalIncludeDirectories>$(SolutionDir)\Src\Engine\Common\;$(SolutionDir)\Src\Engine\PC\;$(SolutionDir)Dependencies\SDL2-2.24.0\include\</AdditionalIncludeDirectories>
+      <Optimization>MaxSpeed</Optimization>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib\$(Platform)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <!--<AdditionalDependencies>PC.lib;Common.lib;%(AdditionalDependencies)</AdditionalDependencies>-->
+      <AdditionalDependencies>PC.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <LinkTimeCodeGeneration>UseFastLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /y /d "$(SolutionDir)"\Dependencies\SDL2-2.24.0\SDL2.dll "$(OutDir)"</Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>xcopy /y /d /s "$(SolutionDir)"assets  "$(OutDir)"assets\\
+xcopy /y /d "$(SolutionDir)"Dependencies\\SDL2-2.24.0\\SDL2.dll  "$(OutDir)"</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <Import Condition="'$(ConfigurationType)' == 'Makefile' and Exists('$(VCTargetsPath)\Platforms\$(Platform)\SCE.Makefile.$(Platform).targets')" Project="$(VCTargetsPath)\Platforms\$(Platform)\SCE.Makefile.$(Platform).targets" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Condition="Exists('$(VCTargetsPath)\BuildCustomizations\OrbisWavePsslc.targets')" Project="$(VCTargetsPath)\BuildCustomizations\OrbisWavePsslc.targets" />
+    <Import Condition="Exists('$(VCTargetsPath)\BuildCustomizations\SCU.targets')" Project="$(VCTargetsPath)\BuildCustomizations\SCU.targets" />
+  </ImportGroup>
+</Project>
